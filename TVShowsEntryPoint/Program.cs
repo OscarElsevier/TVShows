@@ -26,8 +26,10 @@ namespace TVShowsEntryPoint
 
             while (1 == 1)
             {
-                Console.WriteLine("Select one of the following options: \n 1 to 5 to indicate a favorite/unfavorite TVShow \n list \n favorites");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Select one of the following options: \n 1)1 to 5 to indicate a favorite/unfavorite TVShow \n 2)list \n 3)favorites");
                 var option = Console.ReadLine().ToString();
+                Console.ForegroundColor = ConsoleColor.Red;
 
                 if (option != null)
                 {

@@ -20,3 +20,4 @@ C:\Users\delacruzo\Source\Repos\TVShowsClone\TVShows.DataAccessLayer\obj\Debug\n
 C:\Users\delacruzo\Source\Repos\TVShowsClone\TVShows.DataAccessLayer\obj\Debug\net5.0\TVShows.DataAccessLayer.dll
 C:\Users\delacruzo\Source\Repos\TVShowsClone\TVShows.DataAccessLayer\obj\Debug\net5.0\ref\TVShows.DataAccessLayer.dll
 C:\Users\delacruzo\Source\Repos\TVShowsClone\TVShows.DataAccessLayer\obj\Debug\net5.0\TVShows.DataAccessLayer.pdb
+C:\Users\delacruzo\Source\Repos\TVShowsClone\TVShows.DataAccessLayer\obj\Debug\net5.0\TVShows.DataAccessLayer.csproj.AssemblyReference.cache
