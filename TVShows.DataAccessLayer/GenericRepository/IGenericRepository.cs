@@ -13,9 +13,7 @@ namespace TVShows.DataAccessLayer.DataAccess
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null);
 
         Task<T> Get(Expression<Func<T, bool>> expression);
-        Task Insert(T entity);
         Task InsertRange(IEnumerable<T> entities);
-        Task Delete(int id);
         void Update(T entity);
     }
 }

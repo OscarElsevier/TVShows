@@ -19,13 +19,6 @@ namespace TVShows.DataAccessLayer.DataAccess
             _db = _dBContext.Set<T>();
         }
 
-        public async Task Delete(int id)
-        {
-            var entity = await _db.FindAsync(id);
-            if (entity is not null)
-                _db.Remove(entity);
-        }
-
         public async Task<T> Get(Expression<Func<T, bool>> expression)
         {
             IQueryable<T> query = _db;
@@ -43,11 +36,6 @@ namespace TVShows.DataAccessLayer.DataAccess
 
             return await query.AsNoTracking().ToListAsync();
 
-        }
-
-        public async Task Insert(T entity)
-        {
-            await _db.AddAsync(entity);
         }
 
         public async Task InsertRange(IEnumerable<T> entities)
