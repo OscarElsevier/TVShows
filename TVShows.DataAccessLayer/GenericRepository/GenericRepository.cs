@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using TVShows.DataAccessLayer.Models;
 
 namespace TVShows.DataAccessLayer.DataAccess
 {
@@ -46,6 +45,7 @@ namespace TVShows.DataAccessLayer.DataAccess
         public void Update(T entity)
         {
             _dBContext.ChangeTracker.Clear();
+            _db.Attach(entity);
             _dBContext.Entry(entity).State = EntityState.Modified;
 
         }
