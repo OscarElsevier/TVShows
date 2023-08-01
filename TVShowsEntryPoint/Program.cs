@@ -27,7 +27,7 @@ namespace TVShowsEntryPoint
             while (1 == 1)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Select one of the following options: \n 1)1 to 5 to indicate a favorite/unfavorite TVShow \n 2)list \n 3)favorites");
+                Console.WriteLine("Select one of the following options: \n -1 to 5 to indicate a favorite/unfavorite TVShow \n -list \n -favorites \n -exit");
                 var option = Console.ReadLine().ToString();
                 Console.ForegroundColor = ConsoleColor.Red;
 
@@ -42,7 +42,7 @@ namespace TVShowsEntryPoint
                         case "5":
                             var id = Convert.ToUInt16(option);
                             if (!await tvShowsService.TVShowMakeFavoriteOrNot(id))
-                                break;
+                                return;
                             break;
                         case "list":
                             await tvShowsService.GetTVShows(TVShowsEnum.All);
@@ -50,6 +50,8 @@ namespace TVShowsEntryPoint
                         case "favorites":
                             await tvShowsService.GetTVShows(TVShowsEnum.Favorites);
                             break;
+                        case "exit":
+                            return;
                         default:
                             Console.WriteLine("invalid option, please try again");
                             break;
