@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using TVShows.DataAccessLayer.DataAccess;
 using TVShows.DataAccessLayer.Enums;
@@ -35,9 +36,16 @@ namespace TVShowsEntryPoint.Services
                     break;
             }
 
-            foreach (var tvShow in tvShows)
+            if (tvShows.Any())
             {
-                Console.WriteLine("{0} {1} {2}", tvShow.ID.ToString(), tvShow.TVShowName, tvShow.IsFavorite ? "*" : string.Empty);
+                foreach (var tvShow in tvShows)
+                {
+                    Console.WriteLine("{0} {1} {2}", tvShow.ID.ToString(), tvShow.TVShowName, tvShow.IsFavorite ? "*" : string.Empty);
+                }
+            }
+            else
+            {
+                Console.WriteLine("{0}", "No TvShows found");
             }
         }
 
