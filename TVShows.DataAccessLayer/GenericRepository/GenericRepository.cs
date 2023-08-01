@@ -46,7 +46,7 @@ namespace TVShows.DataAccessLayer.DataAccess
         public void Update(T entity)
         {
             _dBContext.ChangeTracker.Clear();
-            _dBContext.TVShows.Update(entity as TVShowsModel);
+            _dBContext.Entry(entity).State = EntityState.Modified;
 
         }
     }
